@@ -1,6 +1,6 @@
 'use strict';
 
-const UG = require('../module.js');
+import UG from '../module';
 
 let graph = new UG.Graph();
 

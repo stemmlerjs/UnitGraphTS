@@ -1,4 +1,4 @@
-# UnitGraph
+# UnitGraphTypeScript
 
 [![Build Status](https://travis-ci.org/keithwhor/UnitGraph.svg?branch=master)](https://travis-ci.org/keithwhor/UnitGraph)
 
@@ -699,8 +699,6 @@ Alias for `Path#prettify`.
 
 ## About
 
-UnitGraph is MIT licenced, so have fun with it!
+UnitGraphTypescript is MIT licenced, so have fun with it!
 
-Reach me on Twitter, [@keithwhor](http://twitter.com/keithwhor).
-
-Check out my personal website [keithwhor.com](http://keithwhor.com).
+Thank you to the original author, Keith Horwood @ [@keithwhor](http://twitter.com/keithwhor) for putting together the original version of this useful library.

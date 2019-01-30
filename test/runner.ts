@@ -1,18 +1,16 @@
 'use strict';
 
-let expect = require('chai').expect;
+import { expect } from 'chai';
+import UG from '../module'
+import { Unit } from '../lib/unit/unit'
+import { Node } from '../lib/unit/node'
+import { Edge } from '../lib/unit/edge'
+
+import { Collection } from '../lib/collection/collection'
+import { NodeCollection } from '../lib/collection/node_collection'
+import { EdgeCollection } from '../lib/collection/edge_collection'
 
 describe('Test Suite', function() {
-
-  const UG = require('../module.js');
-
-  const Unit = require('../lib/unit/unit.js');
-  const Node = require('../lib/unit/node.js');
-  const Edge = require('../lib/unit/edge.js');
-
-  const Collection = require('../lib/collection/collection.js');
-  const NodeCollection = require('../lib/collection/node_collection.js');
-  const EdgeCollection = require('../lib/collection/edge_collection.js');
 
   describe('UnitGraph', function() {
 
