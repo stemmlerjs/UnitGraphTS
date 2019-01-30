@@ -1,11 +1,12 @@
 
 import { Unit } from './unit'
+import { Edge } from './edge'
 
 export class Node extends Unit {
 
-  public edges: any;
-  public inputEdges: any;
-  public outputEdges: any;
+  public edges: Edge[];
+  public inputEdges: Edge[];
+  public outputEdges: Edge[];
 
   constructor(entity, properties, uniqid) {
 

@@ -1,4 +1,6 @@
 
+import { Unit } from './unit/unit'
+
 let comparators = {
   'is': function(a, b) { return a === b; },
   'not': function(a, b) { return a !== b; },
@@ -14,9 +16,9 @@ let comparators = {
 
 export class Query {
 
-  public _units: any;
+  public _units: Unit[];
 
-  constructor(units) {
+  constructor(units: Unit[]) {
 
     this._units = units.slice();
 

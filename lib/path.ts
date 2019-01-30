@@ -1,6 +1,6 @@
 
 export class Path {
-  public _raw: any;
+  public _raw: any[];
   constructor(array) {
     this._raw = array.slice();
   }

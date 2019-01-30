@@ -1,26 +1,25 @@
 
 import { Unit } from './unit'
+import { Node } from './node'
 
 export class Edge extends Unit {
 
-  public inputNode: any;
-  public outputNode: any;
-  public duplex: any;
-  public distance: any;
+  public inputNode: Node;
+  public outputNode: Node;
+  public duplex: boolean;
+  public distance: number;
 
   constructor(entity, properties, uniqid) {
 
     super(entity, properties, uniqid);
-
     this.inputNode = null;
     this.outputNode = null;
     this.duplex = false;
-
     this.distance = 1;
 
   }
 
-  _linkTo(node, direction) {
+  _linkTo(node: Node, direction: number) {
 
     if (direction <= 0) {
       node.inputEdges.push(this);
@@ -56,17 +55,17 @@ export class Edge extends Unit {
 
   }
 
-  setDistance(v) {
-    this.distance = Math.abs(parseFloat(v) || 0);
+  setDistance(v: number) {
+    this.distance = Math.abs(v || 0);
     return this;
   }
 
-  setWeight(v) {
-    this.distance = 1 / Math.abs(parseFloat(v) || 0);
+  setWeight(v: number) {
+    this.distance = 1 / Math.abs(v || 0);
     return this;
   }
 
-  oppositeNode(node) {
+  oppositeNode(node: Node) {
 
     if (this.inputNode === node) {
       return this.outputNode;
@@ -112,7 +111,7 @@ export class Edge extends Unit {
   toJSON() {
 
     return super.toJSON().concat([
-      this.inputNode.__uniqid__, this.outputNode.__uniqid__, (this.duplex | 0), this.distance
+      this.inputNode.__uniqid__, this.outputNode.__uniqid__, (this.duplex ? 1 : 0), this.distance
     ]);
 
   }

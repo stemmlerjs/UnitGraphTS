@@ -1,14 +1,15 @@
 
 import { Query } from '../query'
+import { Unit } from '../unit/unit'
 
 export class Collection {
 
-  public _name: any;
-  public _units: any;
-  public _indices: any;
-  public _indicesList: any;
+  private _name: string;
+  private _units: Unit[];
+  private _indices: any;
+  private _indicesList: any;
 
-  constructor(name: any) {
+  constructor(name: string) {
 
     this._name = name;
     this._units = [];
@@ -61,7 +62,7 @@ export class Collection {
 
   }
 
-  _add(unit) {
+  _add(unit: Unit) {
 
     if (unit) {
 
@@ -84,7 +85,7 @@ export class Collection {
 
   }
 
-  _remove(unit) {
+  _remove(unit: Unit) {
 
     if (unit) {
 
