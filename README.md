@@ -8,10 +8,10 @@ closest nodes to a target.
 
 ## Installation
 
-UnitGraph is available via npm. Simply run `npm install ug` and then:
+UnitGraph is available via npm. Simply run `npm install ug-ts` and then:
 
 ```javascript
-let ug = require('ug');
+import ug from 'ug-ts'
 ```
 
 To use the package. :)
@@ -21,7 +21,7 @@ To use the package. :)
 ### Find all nodes of type 'person' with name matching 'ae'
 
 ```javascript
-let ug = require('ug');
+import ug from 'ug-ts'
 let graph = new ug.Graph();
 
 graph.createNode('person', {name: 'Rachael'});
@@ -37,7 +37,7 @@ graph.nodes('person').query().filter({name__ilike: 'ae'}).units();
 ### Find the shortest path between two nodes
 
 ```javascript
-let ug = require('ug');
+import ug from 'ug-ts'
 let graph = new ug.Graph();
 
 let civilian = graph.createNode('person', {name: 'Clark Kent'});
@@ -54,7 +54,7 @@ graph.trace(
 ### Find all closest nodes, ordered by distance, of a certain type
 
 ```javascript
-let ug = require('ug');
+import ug from 'ug-ts'
 let graph = new ug.Graph();
 
 let classification = graph.createNode('classification', {name: 'Sharing Economy'});
@@ -99,13 +99,15 @@ graph.closest(
 ### Graph
 
 ```javascript```
+
+```
 Graph()
 ```
 
 Constructor. Part of the `ug` namespace. Use with `new` keyword, i.e.
 
 ```javascript
-let Graph = require('ug').Graph;
+import { Graph } from 'ug-ts'
 let graph = new Graph();
 ```
 
@@ -699,6 +701,8 @@ Alias for `Path#prettify`.
 
 ## About
 
+This project is maintained by myself, Khalil Stemmler, [@stemmlerjs](https://twitter.com/stemmlerjs).
+
 UnitGraphTypescript is MIT licenced, so have fun with it!
 
-Thank you to the original author, Keith Horwood @ [@keithwhor](http://twitter.com/keithwhor) for putting together the original version of this useful library.
+Thank you to the original author, Keith Horwood, [@keithwhor](https://twitter.com/keithwhor) for putting together the original version of this useful library.

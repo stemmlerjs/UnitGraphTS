@@ -21,6 +21,7 @@
     "typescript": "^3.2.4"
   },
   "scripts": {
+    "build": "tsc",
     "test": "mocha --require ts-node/register test/runner.ts",
     "test:dev": "nodemon --watch '**/*.ts' --exec mocha --require ts-node/register test/runner.ts || true",
     "check": "ts-node ./test/check.ts",
@@ -31,5 +32,5 @@
     "url": "https://github.com/stemmlerjs/UnitGraphTS"
   },
   "license": "MIT",
-  "types": "dist/index.d.ts"
+  "types": "dist/module.d.ts"
 }
