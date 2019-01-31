@@ -14,11 +14,11 @@ let comparators = {
   'not_in': function(a, b) { return b.indexOf(a) === -1; }
 };
 
-export class Query {
+export class Query<T> {
 
-  public _units: Unit[];
+  public _units: Unit<T>[];
 
-  constructor(units: Unit[]) {
+  constructor(units: Unit<T>[]) {
 
     this._units = units.slice();
 

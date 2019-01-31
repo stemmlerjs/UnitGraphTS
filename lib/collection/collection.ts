@@ -2,10 +2,10 @@
 import { Query } from '../query'
 import { Unit } from '../unit/unit'
 
-export class Collection {
+export class Collection<T> {
 
   private _name: string;
-  private _units: Unit[];
+  private _units: Unit<T>[];
   private _indices: any;
   private _indicesList: any;
 
@@ -62,7 +62,7 @@ export class Collection {
 
   }
 
-  _add(unit: Unit) {
+  _add(unit: Unit<T>) {
 
     if (unit) {
 
@@ -85,7 +85,7 @@ export class Collection {
 
   }
 
-  _remove(unit: Unit) {
+  _remove(unit: Unit<T>) {
 
     if (unit) {
 
