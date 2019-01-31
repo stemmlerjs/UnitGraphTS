@@ -1,11 +1,11 @@
 
-export class Unit {
+export class Unit<T> {
 
   public entity: any;
   public __uniqid__: any;
-  public properties: any;
+  public properties: T;
 
-  constructor(entity, properties, uniqid) {
+  constructor(entity, properties: T, uniqid) {
 
     this.entity = entity + '';
     this.__uniqid__ = uniqid;

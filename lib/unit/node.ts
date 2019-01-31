@@ -2,19 +2,17 @@
 import { Unit } from './unit'
 import { Edge } from './edge'
 
-export class Node extends Unit {
+export class Node<T> extends Unit<T> {
 
-  public edges: Edge[];
-  public inputEdges: Edge[];
-  public outputEdges: Edge[];
+  public edges: Edge<T>[];
+  public inputEdges: Edge<T>[];
+  public outputEdges: Edge<T>[];
 
-  constructor(entity, properties, uniqid) {
-
+  constructor(entity, properties: T, uniqid: any) {
     super(entity, properties, uniqid);
     this.edges = [];
     this.inputEdges = [];
     this.outputEdges = [];
-
   }
 
   unlink() {
