@@ -2,10 +2,10 @@
 import { Unit } from './unit'
 import { Node } from './node'
 
-export class Edge<T> extends Unit<T> {
+export class Edge<T, U> extends Unit<T> {
 
-  public inputNode: Node<T>;
-  public outputNode: Node<T>;
+  public inputNode: Node<T, U>;
+  public outputNode: Node<U, T>;
   public duplex: boolean;
   public distance: number;
 
@@ -19,13 +19,14 @@ export class Edge<T> extends Unit<T> {
 
   }
 
-  _linkTo(node: Node<T>, direction: number) {
+  _linkTo(node: Node<T, U> | Node<U, T> | any, direction: number) {
 
     if (direction <= 0) {
       node.inputEdges.push(this);
     }
 
     if (direction >= 0) {
+      let el: any = this;
       node.outputEdges.push(this);
     }
 
@@ -65,7 +66,7 @@ export class Edge<T> extends Unit<T> {
     return this;
   }
 
-  oppositeNode(node: Node<T>) {
+  oppositeNode(node: Node<T, U> | Node<U, T> | any) {
 
     if (this.inputNode === node) {
       return this.outputNode;
