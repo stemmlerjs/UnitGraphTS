@@ -25,7 +25,8 @@
     "test": "mocha --require ts-node/register test/runner.ts",
     "test:dev": "nodemon --watch '**/*.ts' --exec mocha --require ts-node/register test/runner.ts || true",
     "check": "ts-node ./test/check.ts",
-    "check:dev": "nodemon --watch '**/*.ts' --exec npm run check"
+    "check:dev": "nodemon --watch '**/*.ts' --exec npm run check",
+    "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
