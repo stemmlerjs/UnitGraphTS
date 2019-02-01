@@ -1,6 +1,6 @@
 {
   "name": "ug-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "UnitGraph - Lightweight Typescript Graph Library",
   "author": "Khalil Stemmler",
   "main": "dist/module.js",
